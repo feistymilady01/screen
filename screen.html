@@ -1,95 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <title>SCREEN</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox Layout</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <style>
-    * {
-        margin: 0px;
-        padding: 0px;
-        box-sizing: border-box;
-    }
+    :root{
+    --background-color1: rgb(247, 133, 133) ;
+    --background-color2: rgb(55, 55, 158) ;
+    --background-color3: rgb(2, 2, 44) ;
+    --small-font-size:5%;
+    --medium-font-size:10%;
+    --large-font-size:20%;
+}
+.img1{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -35px;
+    padding-left: 30px;
+    
+}
+.img2{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -35px;
+    padding-left: 30px;
+    
+}
+.img3{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -35px;
+    padding-left: 30px;
+    
+}
 
-    body {
-        background-image: url(bkg.jpg);
-        width: 100%;
-    }
+.one{
+    background-color:var(--background-color1);
+    color: rgb(241, 238, 238);
+    height: 50%;
+}
+.two{
+    background-color: var(--background-color2);
+    color: whitesmoke;
+    height: 50%;
+}
+.three{
+    background-color:var(--background-color3) ;
+    color: white;
+    height: 50%;
+}
+.cup{
+    background-color: rgb(212, 132, 132);
+    
+}
+.cup1{
+    background-color: rgb(100, 100, 156);
+}
+.cup2{
+    background-color: rgb(41, 41, 78);
+}
 
-    main {
-        display: flex;
-    }
-    table{
-        border: 10px solid black;
-        background-color: white;
-        justify-content: center;
-        align-items: center;
-        padding: 100px;
-    }
+.btn1:hover{
+    background-color: var(--background-color1);
+    cursor: copy;
+    bottom: 50px;
+}
+.btn2:hover{
+    background-color: var(--background-color2);
+    cursor: progress;
+}
+.btn3:hover{
+    background-color: var(--background-color3);
+}
 
-    .one {
-        margin: 0px auto;
-        justify-content: center;
-        align-items: center;
-        padding: 200px;
-        color: white;
-    }
-    .head{
-        border: 5px solid ;
-        background-color: blue;
-        color: white;
-        padding: 50px;
-    }
-    input{
-        color: black;
 </style>
-
 <body>
     <main>
-        <div class="one">
-            <h1>Learn to code by watching others </h1>
-            <h5>See how experienced developes solve real-time problems.
-                watching scripted programs is good,
-                but understanding how developers think is valid.
-            </h5>
-        </div>
+    <div class="one">
+    <!-- card for sedans -->
+    <div class="cup"></div>
+    <div class="img1"><img src="sedan.png" alt="SEDANS" width="30px" ></div>
+    <h1> SEDANS </h1>
 
-        <table>
-            <tr>
-                <td class="head"> Try it free 7 days then s20/mo.thereafter</td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="text" id="Jonathan" name="Jonathan" placeholder="Jonathan" required>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="text" id="Last Name" name="Last Name" placeholder="Last Name" required>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="email" name="Email Address" id="Email Address" placeholder="Email Address" required>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="password" name="password" id="password" placeholder="password" required>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="button" value="CLAIM YOUR FREE TRIAL">
-                </td>
-            </tr>
-            <tr>
-            <td>By clicking the button above!!! You agreed to the <i>Terms and conditions</i> </td>
-            </tr>
-            </table>
-    </main>
+    <P> Choose a sedan for its affordability and excellent fuel economy.
+        Ideal for cruising the city or on your next road trip</P>
 
+    <button class="btn1"> Learn More </button> 
+</div>
+
+<div class="two">
+    <!-- card for SUVS -->
+    <div class="cup1"></div>
+    <div class="img2"><img src="suvs.jpg" alt="SUVS" width="30px"></div>
+    <h1> SUVS </h1>
+
+    <P> Take an SUV for its spacious interior, power, and versatility.
+        Perfect for yournext family vacation and off-road adventures</P>
+
+        <button class="btn2"> Learn More </button> 
+</div>
+
+<div class="three">
+    <div class="cup2"></div>
+    <!-- card for LUXURY -->
+    <div class="img3"><img src="luxury.jpg" alt="LUXURY" width="30px"></div>
+    <h1> LUXURY </h1>
+
+    <P> Cruise in the best car brand without bloated prices.
+        Enjoy the enhanced comfort of a luxury rental and arrive in style.
+    </P>
+
+    <button class="btn3"> Learn More </button> 
+</div>
+</main>
 </body>
-
 </html>
